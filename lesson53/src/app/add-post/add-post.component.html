@@ -1,0 +1,25 @@
+<div class="body">
+    <input
+            type="text"
+            placeholder="Title"
+            (input)="onTitle($event)"
+            [value]="titleInputValue"
+            #title>
+    <textarea
+            type="text"
+            placeholder="Status"
+            (input)="onText($event)"
+            [value]="textInputValue"
+            #text
+            ></textarea>
+
+
+<input
+            type="url"
+            placeholder="Avatar URL"
+            (input)="onAvatar($event)"
+            [value]="avatarInputValue"
+            #avatar>
+
+    <button type="button" (click)="addPost(title.value, text.value, avatar.value)">Add post</button>
+</div>
