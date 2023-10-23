@@ -1,0 +1,14 @@
+<div class="wrapper" [ngClass]="{'online': user.online, 'offline': !user.online}">
+    <div class="body">
+        <div class="picture">
+            <img [src]="user.url" alt="{{ user.name }}">
+        </div>
+        <div class="user-data">
+            <h2>{{ user.name }}</h2>
+            <div class="post-text">{{ user.status }}</div>
+        </div>
+    </div>
+    <button class="network" (click)="buttonStatus()">
+        {{ user.online ? 'Offline' : 'Online' }}
+    </button>
+</div>
